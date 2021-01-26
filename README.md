@@ -3,7 +3,7 @@
 Keeper App is an application using React.js from udemy web development bootcamp. Upgraded to have database using mongodb to save notes data. This application built using MERN (mongodb, express, react, node) stack technology.
 
 
-## Installation
+<!-- ## Installation
 
 Make db called keeperDB in mongodb. Run this script in root directory and server directory. 
 ```
@@ -16,7 +16,7 @@ npm start
 Run this in server directory
 ```
 npm run dev
-```
+``` -->
 
 <!-- ## Installation
 

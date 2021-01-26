@@ -4,19 +4,25 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
+
+require("dotenv").config();
 
 const app = express();
-mongoose.connect("mongodb://localhost:27017/keeperDB", {useNewUrlParser: true, useUnifiedTopology: true});
+
+// app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(cors());
+app.use(express.static(path.join(__dirname, "client", "public")));
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/keeperDB", 
+    {useNewUrlParser: true, useUnifiedTopology: true});
 
 const noteSchema = new mongoose.Schema({
     title: String,
     content: String
   });
 const Note = new mongoose.model("Note", noteSchema);
-
-// app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-app.use(cors());
 
 
 
@@ -76,7 +82,12 @@ app.route("/api/notes/:id")
     });
 
 
-app.listen(3080, function() {
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+});
+
+app.listen(process.env.PORT || 3080, function() {
     console.log("Server started on port 3080");
 });
 
