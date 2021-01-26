@@ -25,13 +25,15 @@ function CreateArea(props) {
     setChecked(true);
   }
 
+  function handleSubmit(e){
+    props.onAdd(noteInput);
+    setNoteInput({title:"", content:""}); 
+    e.preventDefault();
+  }
+
   return (
     <div>
-      <form className="create-note" onSubmit={(e) => {
-        props.onAdd(noteInput);
-        setNoteInput({title:"", content:""}); 
-        e.preventDefault();
-      }}>
+      <form className="create-note" onSubmit={handleSubmit}>
         {checked && <input onChange={handleChange} name="title" placeholder="Title" value={noteInput.title} />}
         <textarea 
           onChange={handleChange} 
