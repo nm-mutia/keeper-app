@@ -1,5 +1,5 @@
 {
-  "name": "keeper-part-3-starting",
+  "name": "keeper-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -15,7 +15,7 @@
     "typescript": "3.3.3",
     "nodemon": "^2.0.6"
   },
-  "proxy": "http://localhost:3080",
+  "proxy": "https://keeper-nm.herokuapp.com:3080 || http://localhost:3080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
