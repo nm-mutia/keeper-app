@@ -1,6 +1,7 @@
 # Keeper App
 
-Keeper App - Application using React.js from udemy web development bootcamp. Upgraded to have database using mongodb to save notes data. This application built using MERN stack technology.
+Keeper App is an application using React.js from udemy web development bootcamp. Upgraded to have database using mongodb to save notes data. This application built using MERN (mongodb, express, react, node) stack technology.
+
 
 <!-- ## Installation
 
@@ -8,16 +9,6 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
 pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
 ## Contributing
