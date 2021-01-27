@@ -1,9 +1,13 @@
 export function getNotes() {
-    return fetch("http://localhost:3080/api/notes").then(data => data.json());
+    const url = "http://localhost:3080/api/notes/" || "https://keeper-nm.herokuapp.com:3080";
+
+    return fetch(url).then(data => data.json());
 }
 
 export function setNote(item) {
-    return fetch("http://localhost:3080/api/notes", {
+    const url = "http://localhost:3080/api/notes/" || "https://keeper-nm.herokuapp.com:3080";
+
+    return fetch(url, {
         method: "POST",
         headers: {
             "Accept": "application/json",
@@ -17,7 +21,9 @@ export function setNote(item) {
 }
 
 export function delNote(id) {
-    return fetch("http://localhost:3080/api/notes/"+id, {
+    const url = "http://localhost:3080/api/notes/"+id || "https://keeper-nm.herokuapp.com:3080"+id;
+
+    return fetch(url, {
         method: "DELETE",
         headers: {
             "Accept": "application/json",

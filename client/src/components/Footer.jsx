@@ -4,7 +4,7 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <p>Copyright ⓒ {year} <a href="https://github.com/nm-mutia/keeper-app" target="_blank">nmmutia</a></p>
+      <p>Copyright ⓒ {year} <a href="https://github.com/nm-mutia/keeper-app" target="_blank" rel="noopener noreferrer">nmmutia</a></p>
     </footer>
   );
 }

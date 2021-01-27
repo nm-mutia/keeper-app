@@ -13,7 +13,7 @@ const app = express();
 // app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, "client", "public")));
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/keeperDB", 
     {useNewUrlParser: true, useUnifiedTopology: true});
@@ -84,7 +84,7 @@ app.route("/api/notes/:id")
 
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 3080, function() {
