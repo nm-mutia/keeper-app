@@ -2,6 +2,9 @@
 
 Keeper App is an application using React.js from udemy web development bootcamp. Upgraded to have database using mongodb to save notes data. This application built using MERN (mongodb, express, react, node) stack technology.
 
+## Access
+
+For live preview can be accessed at https://keeper-nm.herokuapp.com/
 
 <!-- ## Installation
 
